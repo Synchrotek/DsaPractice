@@ -1,0 +1,6 @@
+# .gitignore
+*.exe
+Structured-way/**/*.exe
+others/**/*.exe
+**/.cph/
+**/.vscode/
