@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 int main()
@@ -9,8 +10,8 @@ int main()
 
     // Insert in Vector
     v.push_back(2);
-    v.push_back(4);
     v.push_back(10);
+    v.push_back(4);
 
     // Traverse Method 1
     for (int i = 0; i < v.size(); i++)
@@ -26,6 +27,9 @@ int main()
         cout << (*it) << " ";
     }
     cout << endl;
+
+    // Sort method for vector
+    sort(v.begin(), v.end());
 
     // Traverse Method 3
     for (auto element : v)
@@ -50,6 +54,11 @@ int main()
     for (auto element : v2)
         cout << element << " ";
     cout << endl;
+
+    // Store pair of values in vector
+    pair<int, char> p;
+    p.first = 5;
+    p.second = 'S';
 
     return 0;
 }
