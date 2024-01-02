@@ -1,3 +1,6 @@
+// Time complexity: O(n +k)
+// Space complexity: O(k)
+// ----------------------------------
 #include <iostream>
 using namespace std;
 
@@ -30,13 +33,17 @@ void countSort(int arr[], int n)
 
 int main()
 {
-    int arr[] = {1, 3, 2, 3, 4, 1, 6, 4, 3};
-    countSort(arr, 9);
 
-    for (int i = 0; i < 9; i++)
-    {
+    int N;
+    cin >> N;
+    int arr[N];
+    for (int i = 0; i < N; i++)
+        cin >> arr[i];
+
+    countSort(arr, N);
+
+    for (int i = 0; i < N; i++)
         cout << arr[i] << " ";
-    }
     cout << endl;
 
     return 0;
