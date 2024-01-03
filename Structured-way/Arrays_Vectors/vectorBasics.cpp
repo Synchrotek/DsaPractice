@@ -1,64 +1,53 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 using namespace std;
 
-int main()
+// If want to change vector value in function then
+// pass the vector by refernce not by value as below
+void display(vector<int> v)
 {
-
-    vector<int> v;
-
-    // Insert in Vector
-    v.push_back(2);
-    v.push_back(10);
-    v.push_back(4);
-
-    // Traverse Method 1
     for (int i = 0; i < v.size(); i++)
     {
         cout << v[i] << " ";
     }
+    // v.size // O(1)
     cout << endl;
+}
 
-    // Traverse Method 2
-    vector<int>::iterator it;
-    for (it = v.begin(); it != v.end(); it++)
+int main()
+{
+    int a[10];
+    vector<int> v1;
+    int N;
+    cin >> N;
+    for (int i = 0; i < N; i++)
     {
-        cout << (*it) << " ";
+        int val;
+        cin >> val;
+        v1.push_back(val);
     }
-    cout << endl;
+    display(v1);
 
-    // Sort method for vector
-    sort(v.begin(), v.end());
+    cout << "-----------------" << endl;
 
-    // Traverse Method 3
-    for (auto element : v)
-    {
-        cout << element << " ";
-    }
-    cout << endl;
+    vector<int> v2(5, 2);
+    v2.push_back(3);
+    v2.push_back(4); // O(1)
+    display(v2);
+    v2.pop_back(); // O(1)
+    display(v2);
 
-    // delete/pop from vector
-    v.pop_back();
+    cout << "-----------------" << endl;
 
-    vector<int> v2(3, 50);
-    for (auto element : v2)
-        cout << element << " ";
-    cout << endl;
+    vector<int> v3 = v1; // copy by value: O(n)
+    v3.push_back(5);
+    display(v3);
+    display(v1);
 
-    // Swapped values of vector v and v2
-    swap(v, v2);
-    for (auto element : v)
-        cout << element << " ";
-    cout << endl;
-    for (auto element : v2)
-        cout << element << " ";
-    cout << endl;
-
-    // Store pair of values in vector
-    pair<int, char> p;
-    p.first = 5;
-    p.second = 'S';
+    vector<int> &v4 = v1; // copy by reference
+    v4.push_back(5);
+    display(v4);
+    display(v1);
 
     return 0;
 }
