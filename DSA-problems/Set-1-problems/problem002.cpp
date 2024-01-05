@@ -1,5 +1,5 @@
 // Find minimum and maximum element in an array
-// ProblemLink: https://www.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1
+// Link: https://www.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1
 
 #include <iostream>
 #include <utility>
@@ -29,6 +29,7 @@ pair<long long, long long> getMinMax(long long a[], int n)
     return p;
 }
 
+// Driver Code --------------------------------
 int main()
 {
     int n;
