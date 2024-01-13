@@ -1,10 +1,6 @@
-// ----------------------------------------
-// NOT COMPLETED YET
-// ----------------------------------------
-// ----------------------------------------
-
 #include <iostream>
 #include <stack>
+#include <algorithm>
 #include <math.h>
 using namespace std;
 
@@ -28,8 +24,9 @@ int prec(char c)
     }
 }
 
-int InToPreFix(string s)
+string InToPreFix(string s)
 {
+    reverse(s.begin(), s.end());
     stack<char> st;
     string res;
 
@@ -39,13 +36,13 @@ int InToPreFix(string s)
         {
             res += s[i];
         }
-        else if (s[i] == '(')
+        else if (s[i] == ')')
         {
             st.push(s[i]);
         }
-        else if (s[i] == ')')
+        else if (s[i] == '(')
         {
-            while (!st.empty() && st.top() != '(')
+            while (!st.empty() && st.top() != ')')
             {
                 res += st.top();
                 st.pop();
@@ -55,11 +52,31 @@ int InToPreFix(string s)
                 st.pop();
             }
         }
+        else
+        {
+            while (!st.empty() && prec(st.top()) >= prec(s[i]))
+            {
+                res += st.top();
+                st.pop();
+            }
+            st.push(s[i]);
+        }
     }
+
+    while (!st.empty())
+    {
+        res += st.top();
+        st.pop();
+    }
+    reverse(res.begin(), res.end());
+    return res;
 }
 
 int main()
 {
+    string infixStr = "(a-b/c)*(a/k-l)";
+    cout << "Infix: " << infixStr << endl;
+    cout << "Prefix: " << InToPreFix(infixStr) << endl;
 
     return 0;
 }
