@@ -128,6 +128,16 @@ void display(node *head)
 int main()
 {
     node *head = NULL;
+
+    // int N; // Size of LinkedList
+    // cin >> N;
+    // int vals = 0;
+    // while (N--)
+    // {
+    //     cin >> vals;
+    //     insertAtTail(head, vals);
+    // }
+
     insertAtTail(head, 12);
     insertAtTail(head, 24);
     insertAtTail(head, 42);
