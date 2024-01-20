@@ -1,38 +1,41 @@
+// Problem: Next Greater Element I
+// Problem Link: https://leetcode.com/problems/next-greater-element-i
+
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int firstOcc(int arr[], int n, int i, int key)
+class Solution
 {
-    if (i == n)
+public:
+    vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2)
     {
-        return -1;
+        vector<int> res = {12, 2, 3, 4, 5};
+        return res;
     }
-
-    if (arr[i] == key)
-    {
-        return i;
-    }
-    return firstOcc(arr, n, i + 1, key);
-}
-
-int lastOcc(int arr[], int n, int i, int key)
-{
-    int restArray = lastOcc(arr, n, i + 1, key);
-    if (restArray != -1)
-    {
-        return restArray;
-    }
-    if (arr[i] == key)
-    {
-        return i;
-    }
-    return -1;
-}
+};
 
 int main()
 {
-    int arr[] = {4, 2, 1, 2, 5, 2, 7};
-    cout << firstOcc(arr, 7, 0, 2);
+    int n1, n2, vals;
+    cin >> n1 >> n2;
+    vector<int> nums1;
+    vector<int> nums2;
+    for (int i = 0; i < n1; i++)
+    {
+        cin >> vals;
+        nums1.push_back(vals);
+    }
+    for (int i = 0; i < n2; i++)
+    {
+        cin >> vals;
+        nums2.push_back(vals);
+    }
+    Solution s = Solution();
+    nums2 = s.nextGreaterElement(nums1, nums2);
+    for (int i = 0; i < nums2.size(); i++)
+        cout << nums2[i] << " ";
+    cout << endl;
 
     return 0;
 }
