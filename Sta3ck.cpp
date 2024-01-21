@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <stack>
 using namespace std;
 
 class Solution
@@ -10,7 +11,21 @@ class Solution
 public:
     vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2)
     {
-        vector<int> res = {12, 2, 3, 4, 5};
+        int n = nums2.size();
+        stack<int> st;
+        vector<int> res(n);
+        for (int i = (2 * n) - 1; i >= 0; i--)
+        {
+            while (!st.empty() && nums2[i % n] >= st.top())
+            {
+                st.pop();
+            }
+            if (i < n)
+            {
+                st.empty() ? res[i] = -1 : res[i] = st.top();
+            }
+            st.push(nums2[i % n]);
+        }
         return res;
     }
 };
