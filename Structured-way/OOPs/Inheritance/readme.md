@@ -7,8 +7,20 @@
 - Using classes solves this problem by modelling program as a real world scenario.
  
  ------------------------------
- ## Procedure oriented programming
+ ### Procedure oriented programming
  - Conists of writing a set of instructions for the computer to follow
  - Main focus is on functions and not on flow of data
  - Functions can either use local or global data
  - Data moves openly from function to function
+
+ ### Object oriented programming
+ - Works on the concept of classes and objects
+ - A class is a template to create objects
+ - Treats data as critical element
+ - Decomposes the problem in objects and builds data and functions around the objects
+
+ 
+ ------------------------------
+ ## Basic concepts in OOPS
+ - Classes: Basic template for creating objects
+ - Objects: Basic run time entities
