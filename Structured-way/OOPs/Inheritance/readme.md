@@ -24,3 +24,8 @@
  ## Basic concepts in OOPS
  - Classes: Basic template for creating objects
  - Objects: Basic run time entities
+ - Data Abstraction & Encapsulation: Wrapping data and fucntions into single unit
+ - Inheritance: Properties of one class can be inherited into other class
+ - Polymorphism: Ability to take more than one forms
+ - Dynamic binding: Code which will execute is not known until the program runs
+ - Message passing: Object.message(information) call format
