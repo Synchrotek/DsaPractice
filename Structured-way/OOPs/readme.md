@@ -29,3 +29,10 @@
  - Polymorphism: Ability to take more than one forms
  - Dynamic binding: Code which will execute is not known until the program runs
  - Message passing: Object.message(information) call format
+ 
+ ------------------------------
+ ## Benefits of OOP
+ - Better code reusability using objects and inheritance
+ - Principle of data hiding helps build secure systems
+ - Multiple objects can co-exist without any interference
+ - Software complexity can be easily managed
