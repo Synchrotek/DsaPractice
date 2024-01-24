@@ -1,0 +1,14 @@
+### Classes vs Structures
+- Initially "C++" was called "C with classes".
+- A class is the extension of structure (in C).
+- Structure in C++ are typedefed by default.
+- Structure had various limitations like:
+    - Members are public.
+    - No methods are allowed.
+- Classes are simply - structures with more functioanlity.
+- Classes can have methods and properties.
+- Classes can make few members as private & few as public.
+- We can declare objects along with the class declaration.
+- The private members of a class can only be accessed
+    - with getter or setter methods.
+- Neseting of member function is possible in classes.
