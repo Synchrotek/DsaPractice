@@ -46,3 +46,10 @@ int main()
 
     return 0;
 }
+
+/*
+ Hi, I'm an IT student.
+ Passionate about - ᴡᴇʙ ᴅᴇᴠ, ᴍʟ, ɪᴏᴛ.
+ All my projects are available in the repository
+ Fun fact - Like me Games are biggest motivation of many programmers
+*/
