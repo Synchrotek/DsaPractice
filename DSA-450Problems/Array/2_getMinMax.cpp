@@ -1,6 +1,5 @@
 // Find minimum and maximum element in an array
 // Link: https://www.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1
-
 #include <iostream>
 #include <utility>
 using namespace std;
