@@ -19,3 +19,13 @@
     - Non-linear DS
         - Tree
         - Graph
+
+***
+
+# Types of Algorithms
+- Simple recursibe algorithms
+- Divide and conquer algorithms
+- Dynamic programming algorithms
+- Greedy algorithms
+- Brute force algorithms
+- Randomized algorithms
