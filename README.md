@@ -29,3 +29,8 @@
 - Greedy algorithms
 - Brute force algorithms
 - Randomized algorithms
+
+### Type Individual definition
+##### Divide and conquer algorithms:
+- They work based on memorization
+- To find best solution

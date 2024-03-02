@@ -1,6 +1,9 @@
 # .gitignore
 *.exe
+*.class
 Structured-way/**/*.exe
+Structured-way/**/*.class
 others/**/*.exe
+others/**/*.class
 **/.cph/
 **/.vscode/
