@@ -7,4 +7,4 @@ others/**/*.exe
 others/**/*.class
 lib/
 **/.cph/
-**/.vscode/
+# **/.vscode/
